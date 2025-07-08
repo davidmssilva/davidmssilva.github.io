@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>I am David Silva</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <!-- Animated Background Particles -->
+  <div id="particles-js"></div>
+  <canvas id="code-canvas" class="background-effect"></canvas>
+
+  <!-- Hero Section -->
+  <section class="hero page full-height" data-aos="fade-up">
+    <div class="hero-content">
+      <h1><span class="animated-name">$1</span></h1>
+      <p>Software Engineer full-stack with front-end enthusiasm</p>
+      <div>
+        <button class="btn btn-white">Portfolio</button>
+        <button class="btn btn-outline">Contact</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section with Bubbles (Futuristic Theme) -->
+  <section class="section-light futuristic page full-height" data-aos="fade-up">
+    <div class="container">
+      <h2>My current skill set (always improving)</h2>
+      <div class="skills-bubbles">
+        <div class="skill-bubble">Python</div>
+        <div class="skill-bubble">TypeScript</div>
+        <div class="skill-bubble">JavaScript</div>
+        <div class="skill-bubble">Angular</div>
+        <div class="skill-bubble">React</div>
+        <div class="skill-bubble">Node.js</div>
+        <div class="skill-bubble">MongoDB</div>
+        <div class="skill-bubble">Snowflake</div>
+        <div class="skill-bubble">SQL</div>
+        <div class="skill-bubble">Docker</div>
+        <div class="skill-bubble">Jenkins</div>
+        <div class="skill-bubble">Figma</div>
+        <div class="skill-bubble">Git</div>
+        <div class="skill-bubble">Jira</div>
+        <div class="skill-bubble">Agile</div>
+        <div class="skill-bubble">Scrum</div>
+        <div class="skill-bubble">AWS S3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section-dark page full-height" data-aos="fade-up">
+    <div class="container">
+      <h2>Professional Experience</h2>
+      <div>
+        <h3>2022 – Present</h3>
+        <p><strong>Software Engineer, Cisco Systems, Portugal</strong><br>
+        Working across the stack — building modular front-ends with Angular and scalable backends with Node.js and Python. Led a project that used GenAI to automate workflows, saving everyone time. Took initiative in optimizing internal tools, tightening security (hello, NoSQL injections), and pushing reusable design and testing practices. Oh, and I co-led a local talent chapter with 250+ members!</p>
+      </div>
+      <div>
+        <h3>2016 – 2017</h3>
+        <p><strong>Software Development Intern, FAS Sistemas, Portugal</strong><br>
+        My first real dive into software: I developed invoice-detecting automation, built a Chrome extension from scratch to scrape data, and coded print workflows — good old AutoIT and JS times!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section (Retro-Tech Theme) -->
+  <section class="section-light retro page full-height" data-aos="fade-up">
+    <div class="container">
+      <h2>Education</h2>
+      <div>
+        <h3>2020 – 2023</h3>
+        <p>Master of Informatics, University of Lisbon – Focused on IoT, UX/UI, mobile computing, and scalable microservices. Did my thesis on controlling IoT devices remotely (yep, made them talk to each other!). I had a research scholarship, which was basically my first "real" tech job — hands-on, research-heavy, and a lot of debugging.</p>
+      </div>
+      <div>
+        <h3>2017 – 2020</h3>
+        <p>Bachelor in Information Technology, University of Lisbon – Got the foundations here, from databases to Java, and a first taste of web dev with PHP and AWS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AOS Scroll Animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: false, // animations replay on scroll in/out
+      mirror: true // animate on scroll up
+    });
+  </script>
+
+  <!-- External JavaScript File for Effects -->
+  <script src="main.js"></script>
+</body>
+</html>
