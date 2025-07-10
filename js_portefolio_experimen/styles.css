@@ -216,3 +216,15 @@ p {
 .futuristic .skill-bubble:hover {
   background: #a18fff;
 }
+
+#code-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 0;
+  pointer-events: none;
+  display: block;
+}
+
