@@ -3,34 +3,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing</title>
+  <meta name="description" content="D. Silva's portfolio showcasing innovative web projects and interactive tools. Explore AI-driven applications, political quizzes, and creative digital solutions." />
+  <meta name="keywords" content="D.Silva, web development, portfolio, interactive tools, AI projects, political quiz, civic technology" />
+  <meta name="author" content="D. Silva" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="D. Silva - Portfolio & Projects" />
+  <meta property="og:description" content="Explore innovative web projects and interactive tools by David Silva" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://davidmssilva.github.io/" />
+  <title>D. Silva - Portfolio & Projects | Interactive Web Applications</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     body {
-      padding-top: 4rem;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      padding-top: 70px;
+      min-height: 100vh;
     }
+    
+    .navbar {
+      background: rgba(30, 30, 30, 0.95) !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-weight: 600;
+      font-size: 1.4rem;
+      letter-spacing: -0.5px;
+    }
+    
     .hero {
-      background: linear-gradient(135deg, #5e2fb4, #aa10f2);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
-      padding: 6rem 2rem;
+      padding: 5rem 2rem 6rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    .hero p {
+      font-size: 1.25rem;
+      opacity: 0.95;
+      margin-bottom: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #2d3748;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #718096;
+      margin-bottom: 3rem;
+    }
+    
     .project-card {
-      border: 1px solid #e0e0e0;
-      border-radius: 8px;
-      padding: 1rem;
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
-
-    .footer{
-      position: fixed;
-      padding-left: 10px;
-      bottom: 0;
-      width: 100%;
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+      border-color: #667eea;
+    }
+    
+    .project-card h5 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 1rem;
+    }
+    
+    .project-card p {
+      color: #4a5568;
+      margin-bottom: 1rem;
+    }
+    
+    .project-card .text-muted {
+      font-size: 0.9rem;
+      color: #a0aec0 !important;
+      font-style: italic;
+    }
+    
+    .btn-custom {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    
+    .btn-custom:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+      color: white;
+    }
+    
+    .about-section {
+      background: #f7fafc;
+      padding: 4rem 0;
+    }
+    
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
+    }
+    
+    .about-content p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      line-height: 1.8;
+    }
+    
+    footer {
+      background: #2d3748;
+      color: white;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+    
+    footer p {
+      margin: 0;
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      
+      .hero p {
+        font-size: 1rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+      }
     }
   </style>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926080014819451"
@@ -38,37 +208,90 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="#">Welcome to:</a>
+      <a class="navbar-brand" href="#home">Let's Cultivate Growth</a>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>A Boring Landing Page</h1>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Building Interactive Digital Experiences</h1>
+      <p>Exploring the intersection of technology, creativity, and civic engagement through innovative web applications</p>
     </div>
   </section>
 
-<section class="container my-5">
-    <h2 class="mb-4">Projects</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="project-card">
-          <h5>Quiz Político</h5>
-          <p>
-            An interactive AI-driven utility designed for the Portuguese public to explore their political 
-            leanings.
-          </p>
-          <p> This project prioritizes civic utility over self-promotion. Rather than a display of manual coding, it is an exploration of how AI tools can be creatively applied to solve complex social questions and help users navigate political ideologies. </p>
-          <p class="text-muted small">
-            Open to suggestions or corrections regarding party axis positioning to maintain total neutrality.
-          </p>
-          <a href="/quiz-politico/" class="btn btn-outline-primary btn-sm">Explore the Tool</a>
-        </div>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <h2 class="section-title">Welcome</h2>
+        <p>
+          I'm a developer passionate about creating meaningful digital tools that serve real-world purposes. 
+          <br />
+          My work focuses on leveraging modern web technologies and AI to build applications that are both functional and accessible.
+        </p>
+        <p>
+          Each project here represents an exploration of how technology can address complex challenges, 
+          from civic engagement to interactive learning experiences.
+        </p>
       </div>
     </div>
   </section>
+
+  <!-- Projects Section -->
+  <section class="container my-5" id="projects">
+    <div class="text-center mb-5">
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-subtitle">Innovative tools designed to inform, engage, and inspire</p>
+    </div>
+    
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <article class="project-card">
+          <h5>Quiz Político</h5>
+          <p>
+            An interactive AI-driven utility designed for the Portuguese public to explore their political 
+            leanings through a comprehensive questionnaire that maps responses across the political spectrum.
+          </p>
+          <p>
+            This project prioritizes civic utility over self-promotion. Rather than a display of manual coding, 
+            it is an exploration of how AI tools can be creatively applied to solve complex social questions 
+            and help users navigate political ideologies with clarity and neutrality.
+          </p>
+          <p class="text-muted">
+            Open to suggestions or corrections regarding party axis positioning to maintain total neutrality 
+            and accuracy in political representation.
+          </p>
+          <a href="/quiz-politico/" class="btn-custom" aria-label="Explore Quiz Político">Explore the Tool</a>
+        </article>
+      </div>
+      
+      <!-- Placeholder for future projects -->
+      <div class="col-md-6 col-lg-5">
+        <article class="project-card" style="background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); border-style: dashed;">
+          <h5>More Projects Coming Soon</h5>
+          <p>
+            I'm constantly working on new ideas and innovative solutions. Check back regularly to discover 
+            new interactive tools and applications.
+          </p>
+          <p>
+            Each project is crafted with attention to user experience, accessibility, and real-world utility.
+          </p>
+          <p class="text-muted">
+            Have a project idea or collaboration opportunity? Feel free to reach out!
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container text-center">
+      <p>&copy; D. Silva. All rights reserved. | Building meaningful digital experiences</p>
+    </div>
+  </footer>
 </body>
 </html>
